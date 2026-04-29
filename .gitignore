@@ -1,0 +1,26 @@
+﻿# Build outputs
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+.vs/
+
+# appsettings with credentials — never commit these
+appsettings.json
+appsettings.Development.json
+
+# Node / Vite (Phase 2)
+ClientApp/node_modules/
+ClientApp/dist/
+
+# EF Core migrations are OK to commit
+# but never commit the DB itself
+*.db
+
+# OS files
+.DS_Store
+Thumbs.db
+
+wwwroot/lib/
