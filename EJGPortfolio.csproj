@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\components\hero\Hero.tsx" />
+    <None Remove="ClientApp\src\components\navbar\Navbar.tsx" />
+    <None Remove="ClientApp\src\types\index.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.4">
       <PrivateAssets>all</PrivateAssets>
@@ -14,6 +20,19 @@
     </PackageReference>
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ClientApp\src\components\about\" />
+    <Folder Include="ClientApp\src\components\contact\" />
+    <Folder Include="ClientApp\src\components\projects\" />
+    <Folder Include="ClientApp\src\components\skills\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\components\hero\Hero.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\components\navbar\Navbar.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\types\index.ts" />
   </ItemGroup>
 
 </Project>

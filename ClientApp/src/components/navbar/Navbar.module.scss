@@ -1,0 +1,119 @@
+﻿@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: $spacing-md $spacing-lg;
+    transition: background 0.3s ease, backdrop-filter 0.3s ease;
+    // Adds frosted glass effect when scrolled
+    &.scrolled {
+        background: rgba(13, 13, 13, 0.85);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--color-border);
+    }
+}
+
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text);
+    letter-spacing: -0.5px;
+
+    &:hover {
+        color: var(--color-text);
+    }
+}
+
+.dot {
+    color: var(--color-primary);
+}
+
+.links {
+    display: none;
+    gap: $spacing-lg;
+
+    @include respond-to('md') {
+        display: flex;
+    }
+}
+
+.link {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.2s ease;
+
+    &:hover {
+        color: var(--color-primary);
+    }
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: $spacing-xs;
+
+    @include respond-to('md') {
+        display: none;
+    }
+
+    span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: var(--color-text);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    &.open {
+        span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        span:nth-child(2) {
+            opacity: 0;
+        }
+
+        span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+    }
+}
+
+.mobileMenu {
+    display: flex;
+    flex-direction: column;
+    padding: $spacing-md $spacing-lg;
+    border-top: 1px solid var(--color-border);
+    background: var(--color-bg);
+
+    @include respond-to('md') {
+        display: none;
+    }
+}
+
+.mobileLink {
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    padding: $spacing-sm 0;
+    text-align: left;
+    width: 100%;
+
+    &:hover {
+        color: var(--color-primary);
+    }
+}
