@@ -1,0 +1,56 @@
+﻿@use 'variables' as *;
+
+// Responsive breakpoint mixin
+// Usage: @include respond-to('md') { ... }
+@mixin respond-to($bp) {
+    @if $bp == 'sm' {
+        @media (min-width: $bp-sm) {
+            @content;
+        }
+    }
+    @else if $bp == 'md' {
+        @media (min-width: $bp-md) {
+            @content;
+        }
+    }
+    @else if $bp == 'lg' {
+        @media (min-width: $bp-lg) {
+            @content;
+        }
+    }
+    @else if $bp == 'xl' {
+        @media (min-width: $bp-xl) {
+            @content;
+        }
+    }
+}
+
+// Flex center shorthand
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Section padding — consistent spacing across all sections
+@mixin section-padding {
+    padding: $spacing-xl $spacing-md;
+
+    @include respond-to('md') {
+        padding: $spacing-2xl $spacing-lg;
+    }
+}
+
+// Card style — reused across projects and skills
+@mixin card {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    padding: $spacing-lg;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+        border-color: var(--color-primary-dim);
+        transform: translateY(-2px);
+    }
+}

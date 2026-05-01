@@ -1,0 +1,34 @@
+﻿// ── Color Palette ────────────────────────────────────────────
+// CSS custom properties so they're available everywhere
+// including inside React component SCSS modules
+:root {
+    --color-bg: #0d0d0d;
+    --color-bg-alt: #141414;
+    --color-bg-card: #1a1a1a;
+    --color-border: #2a2a2a;
+    --color-primary: #c084fc;
+    --color-primary-dim: #9333ea;
+    --color-accent: #818cf8;
+    --color-text: #e2e8f0;
+    --color-text-muted: #94a3b8;
+    --color-success: #4ade80;
+    --color-error: #f87171;
+}
+
+// ── Typography ───────────────────────────────────────────────
+$font-primary: 'Inter', system-ui, -apple-system, sans-serif;
+$font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+// ── Spacing ──────────────────────────────────────────────────
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 2rem;
+$spacing-xl: 4rem;
+$spacing-2xl: 8rem;
+
+// ── Breakpoints ──────────────────────────────────────────────
+$bp-sm: 640px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+$bp-xl: 1280px;
