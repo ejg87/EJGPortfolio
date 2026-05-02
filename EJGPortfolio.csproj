@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <None Remove="ClientApp\src\components\about\About.tsx" />
+    <None Remove="ClientApp\src\components\contact\Contact.tsx" />
     <None Remove="ClientApp\src\components\hero\Hero.tsx" />
     <None Remove="ClientApp\src\components\navbar\Navbar.tsx" />
     <None Remove="ClientApp\src\components\projects\ProjectCard.tsx" />
@@ -28,11 +29,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ClientApp\src\components\contact\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <TypeScriptCompile Include="ClientApp\src\components\about\About.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\components\contact\Contact.tsx" />
     <TypeScriptCompile Include="ClientApp\src\components\hero\Hero.tsx" />
     <TypeScriptCompile Include="ClientApp\src\components\navbar\Navbar.tsx" />
     <TypeScriptCompile Include="ClientApp\src\components\projects\ProjectCard.tsx" />
