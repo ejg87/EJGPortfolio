@@ -7,8 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\components\about\About.tsx" />
     <None Remove="ClientApp\src\components\hero\Hero.tsx" />
     <None Remove="ClientApp\src\components\navbar\Navbar.tsx" />
+    <None Remove="ClientApp\src\components\skills\Skills.tsx" />
+    <None Remove="ClientApp\src\constants\skills.ts" />
     <None Remove="ClientApp\src\types\index.ts" />
   </ItemGroup>
 
@@ -23,15 +26,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ClientApp\src\components\about\" />
     <Folder Include="ClientApp\src\components\contact\" />
     <Folder Include="ClientApp\src\components\projects\" />
-    <Folder Include="ClientApp\src\components\skills\" />
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\components\about\About.tsx" />
     <TypeScriptCompile Include="ClientApp\src\components\hero\Hero.tsx" />
     <TypeScriptCompile Include="ClientApp\src\components\navbar\Navbar.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\components\skills\Skills.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\constants\skills.ts" />
     <TypeScriptCompile Include="ClientApp\src\types\index.ts" />
   </ItemGroup>
 
